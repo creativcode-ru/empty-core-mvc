@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\css\site-old.css" />
-    <Content Include="wwwroot\css\site-old.min.css" />
+    <Content Include="wwwroot\css\arhiv\normalize.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\arhiv\site-start.css" />
+    <Content Include="wwwroot\css\normalize.css" />
     <Content Include="wwwroot\css\site.css" />
   </ItemGroup>
   <ItemGroup>

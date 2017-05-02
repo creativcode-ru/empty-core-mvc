@@ -13,6 +13,13 @@ namespace empty_core_mvc.Controllers
             return View();
         }
 
+        public IActionResult BassCss()
+        {
+            ViewData["Message"] = "Примеры Basscss";
+
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Сведения о пректе";
@@ -24,5 +31,6 @@ namespace empty_core_mvc.Controllers
         {
             return View();
         }
+
     }
 }

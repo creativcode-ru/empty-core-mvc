@@ -1,0 +1,112 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = ViewData["Message"];
+}
+<p>@ViewData["Message"]</p>
+@*-------------------------------------------------------*@
+<hr />
+<h2 class="h1">Типографика</h2>
+<p class="h1">Размер шрифта h1</p>
+<p class="h2">Размер шрифта h2</p>
+<p class="h3">Размер шрифта h3</p>
+<p class="h4">Размер шрифта h4</p>
+<p class="h5">Размер шрифта h5</p>
+<p class="h6">Размер шрифта h6</p>
+
+<p class="regular">нормальный <span class="bold">жирный</span> <span class="italic">курсив</span> <span class="caps">заглавные</span> </p>
+<p class="left-align">Выровнять влево, в начало строки</p>
+<p class="center">Выровнять по центру строки</p>
+<p class="right-align">Выровныть справа, в конец строки</p>
+<p class="justify">Длинный текст выровнять по обеим краям. Будет менятся расстояние между словами. Длинный текст выровнять по обеим краям. Будет менятся расстояние между словами. Длинный текст выровнять по обеим краям. Будет менятся расстояние между словами.</p>
+<p class="nowrap">Не переносить на другую строку. Не переносить на другую строку. Не переносить на другую строку. Не переносить на другую строку. Не переносить на другую строку.</p>
+<p class="underline">Подчеркивание</p>
+<div style="width:150px;"><p class="truncate">Текст усекается по размеру контейнера</p></div>
+<p class="font-family-inherit">Font Family Inherit</p>
+<p class="font-size-inherit">Font Size Inherit</p>
+<a class="text-decoration-none">Ссылка без подчеркивания <b>text-decoration-none</b></a>
+
+<h2 class="mt2" >Списки</h2>
+<ul class="list-reset">
+    <li>Сброс стилей списка</li>
+    <li>удалить маркеры списка</li>
+    <li>удалить нумерацию списаа</li>
+    <li>сбросить поля</li>
+</ul>
+
+<p>Список в одну строку:</p>
+<ul class="list-reset">
+    <li class="inline-block mr1">Half-Smoke</li>
+    <li class="inline-block mr1">Kielbasa</li>
+    <li class="inline-block mr1">Bologna</li>
+    <li class="inline-block mr1">Prosciutto</li>
+</ul>
+
+@*-------------------------------------------------------*@
+<hr />
+<h2 class="h1">Макет страницы</h2>
+<h3 class="mt2">Display</h3>
+<p>Отображение блоков, и элементов страницы:</p>
+<div class="inline">inline1</div><div class="inline">inline2</div>
+<div class="inline-block">inline-block</div>
+<a href="#" class="block">block</a>
+<div class="table">
+    <div class="table-cell">table-cell-1 ячейка таблицы из div</div>
+    <div class="table-cell">table-cell-2</div>
+</div>
+
+<h3 class="mt2">Overflow</h3>
+<p>Переполнение .overflow-hidden, .overflow-scroll, and .overflow-auto.</p> 
+<p>.overflow-hidden можно также испольховать для сброса плавающих элементов</p> 
+
+<h3 class="mt2">Float</h3>
+<p>Плавающие элементы .clearfix чтобы очистить, затем , .left , и .right</p> 
+
+<div class="clearfix border">
+    <div class="left border">.left первый блок слева</div>
+    <div class="right border">.right второй блок справа</div>
+</div>
+
+<p>другой порядок контекста</p> 
+<div class="clearfix border">
+    <div class="right border">.right первый блок справа</div>
+    <div class="left border">.left второй блок слева</div>
+</div>
+
+<h3 class="mt2">Max Width</h3>
+<p>Адаптивное заполнение</p> 
+<p>.fit чтобы картинка заполняла весь контейнер.</p> 
+<div class="col-3 border">
+    <img class="fit" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" />
+</div>
+
+<p class="mt1">Управление шириной: 4 размера контейнера max-width-1,2,3,4 для текста</p> 
+<p class="max-width-1 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+<p class="max-width-2 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+<p class="max-width-3 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+<p class="max-width-4 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+
+<h3 class="mt2">Граница внутри контейнера</h3>
+<div class="col-6 p2 border-box border">.border-box</div>
+
+<h3 class="mt2">Картинка с текстом</h3>
+<p class="mt1">Используйте стандартные стили, чтобы разместить картинку рядом с текстом</p> 
+<div class="clearfix mb2 border">
+    <div class="left p2 mr1 border"><img style="width:100px;" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" /></div>
+    <div class="overflow-hidden">
+        <p><b>Body</b>Текст обтекает картинку справа. Для картинки используются поля и отступы.</p>
+        <p><b>Body</b> Текст находится в контейнере, который не дает тексту заползать под картинку.</p>
+    </div>
+</div>
+
+<p class="mt1">Картинки с двух сторон</p>
+<div class="clearfix mb2 border">
+    <div class="left p2 mr1 border"><img style="width:50px;" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" /></div>
+    <div class="right p2 ml1 border"><img style="width:100px;" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" /></div>
+    <div class="overflow-hidden">
+        <p><b>Body</b> Текст всегда остается между картинками, полосы прокрутки при сжатии не возникает.</p>
+    </div>
+</div> 
