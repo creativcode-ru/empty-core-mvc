@@ -29,7 +29,7 @@
 <p class="font-size-inherit">Font Size Inherit</p>
 <a class="text-decoration-none">Ссылка без подчеркивания <b>text-decoration-none</b></a>
 
-<h2 class="mt2" >Списки</h2>
+<h2 class="mt2">Списки</h2>
 <ul class="list-reset">
     <li>Сброс стилей списка</li>
     <li>удалить маркеры списка</li>
@@ -59,31 +59,31 @@
 </div>
 
 <h3 class="mt2">Overflow</h3>
-<p>Переполнение .overflow-hidden, .overflow-scroll, and .overflow-auto.</p> 
-<p>.overflow-hidden можно также испольховать для сброса плавающих элементов</p> 
+<p>Переполнение .overflow-hidden, .overflow-scroll, and .overflow-auto.</p>
+<p>.overflow-hidden можно также испольховать для сброса плавающих элементов</p>
 
 <h3 class="mt2">Float</h3>
-<p>Плавающие элементы .clearfix чтобы очистить, затем , .left , и .right</p> 
+<p>Плавающие элементы .clearfix чтобы очистить, затем , .left , и .right</p>
 
 <div class="clearfix border">
     <div class="left border">.left первый блок слева</div>
     <div class="right border">.right второй блок справа</div>
 </div>
 
-<p>другой порядок контекста</p> 
+<p>другой порядок контекста</p>
 <div class="clearfix border">
     <div class="right border">.right первый блок справа</div>
     <div class="left border">.left второй блок слева</div>
 </div>
 
 <h3 class="mt2">Max Width</h3>
-<p>Адаптивное заполнение</p> 
-<p>.fit чтобы картинка заполняла весь контейнер.</p> 
+<p>Адаптивное заполнение</p>
+<p>.fit чтобы картинка заполняла весь контейнер.</p>
 <div class="col-3 border">
     <img class="fit" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" />
 </div>
 
-<p class="mt1">Управление шириной: 4 размера контейнера max-width-1,2,3,4 для текста</p> 
+<p class="mt1">Управление шириной: 4 размера контейнера max-width-1,2,3,4 для текста</p>
 <p class="max-width-1 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
 <p class="max-width-2 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
 <p class="max-width-3 border">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
@@ -93,7 +93,7 @@
 <div class="col-6 p2 border-box border">.border-box</div>
 
 <h3 class="mt2">Картинка с текстом</h3>
-<p class="mt1">Используйте стандартные стили, чтобы разместить картинку рядом с текстом</p> 
+<p class="mt1">Используйте стандартные стили, чтобы разместить картинку рядом с текстом</p>
 <div class="clearfix mb2 border">
     <div class="left p2 mr1 border"><img style="width:100px;" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder.svg" /></div>
     <div class="overflow-hidden">
@@ -109,4 +109,199 @@
     <div class="overflow-hidden">
         <p><b>Body</b> Текст всегда остается между картинками, полосы прокрутки при сжатии не возникает.</p>
     </div>
-</div> 
+</div>
+
+<h3 class="mt2">Выравнивание</h3>
+<p class="mt1">Вертикальное выравнивание .align-baseline .align-top, .align-middle .align-bottom</p>
+<div class="overflow-auto">
+    <div class="table border">
+        <div class="table-cell"><h1>Элементы таблицы</h1></div>
+        <div class="table-cell align-baseline border">.align-baseline</div>
+        <div class="table-cell align-top border">.align-top</div>
+        <div class="table-cell align-middle border">.align-middle</div>
+        <div class="table-cell align-bottom border">.align-bottom</div>
+    </div>
+</div>
+
+<hr />
+<h2 class="h1">Поля </h2>
+<h3>Margin</h3>
+<p class="mt1">
+    сокращенное соглашение об именах:<br />
+    m Margin<br />
+    t Top<br />
+    r Right<br />
+    b Bottom<br />
+    l Left<br />
+    x X-axis (left and right)<br />
+    y Y-axis (top and bottom)<br />
+    n Negative<br />
+    0 0 reset<br />
+    1 --space-1 (default .5rem)<br />
+    2 --space-2 (default 1rem)<br />
+    3 --space-3 (default 2rem)<br />
+    4 --space-4 (default 4rem)<br />
+</p>
+<p>Отрицательные поля x-axis используются для смещения полей и заполнения дочерних элементов</p>
+<div class="m3"></div>
+<pre><span class="hljs-class">.m0</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mt0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mr0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mb0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.ml0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mx0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.my0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+
+<span class="hljs-class">.m1</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mt1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mr1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mb1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.ml1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mx1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.my1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+
+<span class="hljs-class">.m2</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mt2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mr2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mb2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.ml2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mx2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.my2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+
+<span class="hljs-class">.m3</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mt3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mr3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mb3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.ml3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mx3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.my3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+
+<span class="hljs-class">.m4</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mt4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mr4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mb4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.ml4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mx4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.my4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+
+<span class="hljs-class">.mxn1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">1</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">2</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">3</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">4</span>)</span></span>; }</span>
+
+<span class="hljs-class">.ml-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto </span></span></span>}
+<span class="hljs-class">.mr-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto </span></span></span>}
+<span class="hljs-class">.mx-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>; }</span>
+</pre>
+<p class="m1">Cброс полей m0 mt0 mb0:</p>
+<h3 class="m0">No margin</h3>
+<h3 class="mt0">No margin top</h3>
+<h3 class="mb0">No margin bottom</h3>
+
+<p class="m1">Добавление полей:</p>
+<div class="mxn1 border">
+    <div class="m1 border">Hamburger</div>
+    <div class="m1 border">Hamburger</div>
+    <div class="m1 border">Hamburger</div>
+</div>
+
+<p class="m1">Отрицательные поля можно использовать с дочерними элементами:</p>
+<div class="border">
+    <div class="mxn2">
+        <div class="px2 border">Padded div</div>
+    </div>
+</div>
+
+<h3 class="mt2">Центрирование</h3>
+<p class="mt1">Блочные элементы .block с заданной шириной могут быть центрированы с помощью .mx-auto </p>
+<img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
+     width="96"
+     height="96"
+     class="block mx-auto" />
+
+<h3 class="mt2">Поля элементов Flexbox</h3>
+<p class="mt1">.mr-auto .ml-auto и .mr-auto можно использовать для добавления интервалов вокруг элементов flexbox</p>
+<div class="flex">
+    <div class="ml-auto">Hamburger|</div>
+    <div>Hot Dog</div>
+</div>
+<p>"Эти поля нельзя объявлять вне Flexbox.  Это должно помочь избежать магических чисел.  Если по какой-то причине по умолчанию шкала пустого пространства не соответствует вашему дизайну, настраивайте перед использованием. </p>
+
+<h3>Отступы Padding</h3>
+<p class="mt1">
+    сокращенное соглашение об именах:<br />
+    p Padding<br />
+    t Top<br />
+    r Right<br />
+    b Bottom<br />
+    l Left<br />
+    x X-axis (left and right)<br />
+    y Y-axis (top and bottom)<br />
+    n Negative (margin only)<br />
+    0 0 reset<br />
+    1 --space-1 (default .5rem)<br />
+    2 --space-2 (default 1rem)<br />
+    3 --space-3 (default 2rem)<br />
+    4 --space-4 (default 4rem)<br />
+</p>
+<pre><span class="hljs-class">.p0</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pt0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pr0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pb0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pl0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.px0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.py0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;  <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+
+<span class="hljs-class">.p1</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pt1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pr1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pb1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pl1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.py1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.px1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+
+<span class="hljs-class">.p2</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pt2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pr2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pb2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pl2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.py2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.px2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+
+<span class="hljs-class">.p3</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pt3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pr3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pb3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pl3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.py3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.px3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+
+<span class="hljs-class">.p4</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pt4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pr4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pb4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pl4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.py4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.px4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+</pre>
+
+<h3>Панели Box///</h3>
+<p><br /></p>
+<div class="p2 bg-blue border rounded">
+    A simple box
+</div>
+<p><br /></p>
+<div class="overflow-hidden border rounded">
+    <div class="p2 bold white bg-blue">
+        Panel Header
+    </div>
+    <div class="p2">
+        Panel Body
+    </div>
+    <div class="p2 bg-silver">
+        Panel Footer
+    </div>
+</div>
+
+<h3>Позиционирование</h3>
+<p><br /></p>
