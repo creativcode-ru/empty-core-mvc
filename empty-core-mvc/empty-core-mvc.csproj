@@ -24,6 +24,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Include="wwwroot\css\arhiv\site-start.css" />
+    <Content Include="wwwroot\css\arhiv\site-start.scss" />
     <Content Include="wwwroot\css\site.css" />
   </ItemGroup>
   <ItemGroup>
