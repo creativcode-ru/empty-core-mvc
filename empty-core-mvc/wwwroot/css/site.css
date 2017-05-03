@@ -2006,3 +2006,11 @@ amp-carousel .start-image-with-caption {
 .start-icon {
   fill: #003f93
 }
+
+/*дополнительно*/
+
+.bg-gray {background-color:lightgray;
+}
+.bg-blue {
+    background-color: dodgerblue;
+}

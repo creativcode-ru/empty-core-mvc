@@ -7,6 +7,8 @@
     ViewData["Title"] = ViewData["Message"];
 }
 <p>@ViewData["Message"]</p>
+<br />
+<p>Эта страница служит для тестирования BassCss</p>
 @*-------------------------------------------------------*@
 <hr />
 <h2 class="h1">Типографика</h2>
@@ -285,9 +287,9 @@
 <span class="hljs-class">.px4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
 </pre>
 
-<h3>Панели Box///</h3>
+<h3>Панели Box</h3>
 <p><br /></p>
-<div class="p2 bg-blue border rounded">
+<div class="p2 bg-gray border rounded">
     A simple box
 </div>
 <p><br /></p>
@@ -303,5 +305,168 @@
     </div>
 </div>
 
-<h3>Позиционирование</h3>
-<p><br /></p>
+
+@*-------------------------------------------------------*@
+<hr />
+<h2 class="h1">Позиционирование</h2>
+<p>Используйте Позиционирование с осторожностью.  Это часто не нужно или используются неправильно</p>
+<p>.relative</p>
+<div class="relative border m2">
+    <div>Hamburger</div>
+</div>
+<p>.absolute для исключения блока из текущего потока</p>
+<div class="relative border">
+    <div>Hamburger</div>
+    <div class="absolute bg-gray border rounded">
+        <a href="#" class="block p1">Dropdown Action</a>
+        <a href="#" class="block p1">Action</a>
+    </div>
+</div>
+<div style="height:6rem;">Оставляем место для абсолютного позиционирования</div>
+<p>Фиксированное позиционирование, как известно, сложно использовать хорошо и может привести к недоступному контенту и нежелательным побочным эффектам.  Используйте фиксированное позиционирование с осторожностью.</p>
+@*<div class="fixed bg-blue">
+    Hamburger
+</div>*@
+<br />
+<p>Для привязки к определенной стороне .top-0 , .right-0 , .bottom-0 или .left-0</p>
+@*<div class="fixed top-0 right-0 m2 border bg-blue">
+    Hamburger
+</div>*@
+<br />
+<p>Чтобы заполнить всю ширину или высоту, используйте противоположные направления.</p>
+@*<div class="fixed top-0 left-0 right-0 p2  bg-blue">
+    Fixed bar
+</div>*@
+
+<br />
+<p>Чтобы обеспечить нужный порядок наложения блоков, используйте z-index. (раскоментируйте этот и предыдущий пример)</p>
+<div class="fixed z2 top-0 left-0 right-0 p2 bg-gray">
+    Fixed bar2
+</div>
+
+
+@*-------------------------------------------------------*@
+<hr />
+<h2 class="h1">Сетка Grid</h2>
+<p>float и width для создания разнообразных макетов сетки.  Используйте этот модуль в сочетании с макетом, пробелами и другими способами</p>
+<p>начинайте с контейнера .clearfix, в котором будут размещатся остальные элементы сетки</p>
+<div class="clearfix border">
+    Контейнер
+</div>
+<br />
+<p>Чтобы установить максимальную ширину, используйте утилиту из модуля basscss-layout (макет).  Утилита .mx-auto устанавливает левую и правую границу поля для центрирования контейнера. </p>
+<div class="max-width-4 mx-auto border">
+    <div class="clearfix border">
+        Контейнер
+    </div>
+</div>
+
+<br />
+<p class="bold">Столбцы .col</p>
+<div class="clearfix border">
+    <div class="col border">.col текст растягивает колонку</div>
+    <div class="col border">.col</div>
+</div>
+
+<br />
+<p>ширина столбцов.  Общее число столбцов должно составляет 12. Если использовать .col.col-6 то ширина колонки будут 6 из 12, т.е 50% ширины</p>
+<div class="clearfix border">
+    <div class="col col-6 border">.col.col-6 Если ширина столбцов задана, то тест не будут растяшивать колонку, если естьвозможность переноса. <br /> ************************************************************************************************************</div>
+    <div class="col col-6 border">.col.col-6</div>
+</div>
+
+<h3>Адаптивная сетка</h3>
+<p>В этом случае ширина столбцов задается с префиксами</p>
+<p class="mt1">
+    соглашение об именах:<br />
+    (Без префикса)   Область не ограничена точкой останова<br />
+    SM-   --breakpoint-sm (по умолчанию: min-width 40em)<br />
+    MD-   --breakpoint-md (по умолчанию: min-width 52em)<br />
+    LG-   --breakpoint-lg (по умолчанию: min-width 64em)<br />
+</p>
+
+<br />
+<p>сжимайте экран, пока колонки не переместятся</p>
+<div class="clearfix border">
+    <div class="sm-col sm-col-6 border">.sm-col.sm-col-6</div>
+    <div class="sm-col sm-col-6 border">.sm-col.sm-col-6</div>
+</div>
+
+<br />
+<p>Добавляем несколько точек останова для разной ширины экрана</p>
+<div class="clearfix border">
+    <div class="sm-col sm-col-6 md-col-5 lg-col-4 border">.sm-col.sm-col-6.md-col-5.lg-col-4</div>
+    <div class="sm-col sm-col-6 md-col-7 lg-col-8 border">.sm-col.sm-col-6.md-col-7.lg-col-8</div>
+</div>
+
+
+<br />
+<p class="bold">Пространство между колонками- Интервал</p>
+<p>Используйте padding и отрицательный margin для создания интервалов.  Отрицательный margin гарантирует, что содержимое внутри каждого столбца будет выровнено с содержимым вне сетки.
+    <br />При использовании отрицательного поля не забудьте компенсировать дополнительную ширину, созданную с помощью дополняющего родительского элемента или с помощью скрытого переполнения.  В противном случае может произойти горизонтальная прокрутка</p>
+<div class="clearfix mxn2 border">
+    <div class="sm-col sm-col-6 md-col-5 lg-col-4 px2"><div class="border">.px2</div></div>
+    <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2"><div class="border">.px2</div></div>
+</div>
+
+<br />
+<p>Для больших или маленьких экранов используйте разные интервалы</p>
+<div class="clearfix mxn1 border">
+    <div class="col col-6 px1"><div class="border">.px1</div></div>
+    <div class="col col-6 px1"><div class="border">.px1</div></div>
+</div>
+<div class="clearfix mxn3 border">
+    <div class="col col-6 px3"><div class="border">.px3</div></div>
+    <div class="col col-6 px3"><div class="border">.px3</div></div>
+</div>
+
+<br />
+<p class="bold">Вложенные сетки</p>
+<div class="clearfix mxn2 border">
+    <div class="sm-col sm-col-6 md-col-5 lg-col-4 px2"><div class="border">Колонка без вложения</div></div>
+    <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2">
+        <div class="clearfix mxn2">
+            <div class="col col-6 px2"><div class="border">Вложенная</div></div>
+            <div class="col col-6 px2"><div class="border">Вложенная</div></div>
+        </div>
+    </div>
+</div>
+
+<br />
+<p class="bold">Обратный порядок</p>
+<p>Чтобы изменить порядок контента столбцов на обратный используйте .col-right</p>
+<div class="clearfix border">
+    <div class="col-right col-6 border">.col-right.col-6 первый</div>
+    <div class="col col-6 border">.col.col-6 второй</div>
+</div>
+
+<br />
+<p class="bold">Центрирование колонок</p>
+<p>Используйте класс .mx-auto для центрирования колонок</p>
+<div class="clearfix mxn2 border">
+    <div class="col-8 px2 mx-auto bg-gray">
+        <div class="border">Centered Column</div>
+    </div>
+</div>
+
+<br />
+<p class="bold">Независимые точки останова</p>
+<p>плавающие элементы могут использоваться независимо</p>
+<div class="clearfix border">
+    <div class="sm-col p2 border">.sm-col</div>
+    <div class="overflow-hidden border">.overflow-hidden</div>
+</div>
+
+<br />
+<p class="bold">Независимая колонка (врезка)</p>
+<div class="border">
+    <div class="right sm-col-6 md-col-4 p2 border">.sm-col-6.md-col-4</div>
+    <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
+</div>
+
+@*-------------------------------------------------------*@
+<hr />
+<h2 class="h1">Flexbox - гибкий макет </h2>
+
+
+<p></p>
