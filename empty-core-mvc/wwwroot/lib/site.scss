@@ -1391,6 +1391,7 @@ a,a:active,a:visited {
   color: inherit
 }
 
+
 .start-btn {
   font-family: inherit;
   font-weight: inherit;
@@ -1574,6 +1575,7 @@ a,a:active,a:visited {
   }
 }
 
+/*пользовательские стили*/
 .start-image-heading {
   color: #fff;
   background: -webkit-linear-gradient(bottom,rgba(0,0,0,.65),transparent);
@@ -2005,4 +2007,12 @@ amp-carousel .start-image-with-caption {
 
 .start-icon {
   fill: #003f93
+}
+
+/*дополнительно*/
+
+.bg-gray {background-color:lightgray;
+}
+.bg-blue {
+    background-color: dodgerblue;
 }

@@ -1,5 +1,8 @@
 {
   "name": "asp.net",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "basscss-sass": "v4.0.0",
+    "normalize-scss": "v2.1.3"
+  }
 }

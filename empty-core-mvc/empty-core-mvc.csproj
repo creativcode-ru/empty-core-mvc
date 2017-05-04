@@ -9,10 +9,36 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\css\arhiv\normalize.css">
+    <Compile Remove="wwwroot\lib\normalize-css\**" />
+    <Content Remove="wwwroot\lib\normalize-css\**" />
+    <EmbeddedResource Remove="wwwroot\lib\normalize-css\**" />
+    <None Remove="wwwroot\lib\normalize-css\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\css\arhiv\site.scss" />
+    <Content Include="wwwroot\css\basscss.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\css\basscss.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\normalize.min.css" />
+    <Content Include="wwwroot\css\site.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\site.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\normalize.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\_normalize.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\lib\site.css" />
+    <Content Include="wwwroot\lib\site.min.css" />
+    <Content Include="wwwroot\lib\site.scss" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />

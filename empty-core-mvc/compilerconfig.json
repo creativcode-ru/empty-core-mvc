@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/lib/basscss-sass/scss/basscss.css",
+    "inputFile": "wwwroot/lib/basscss-sass/scss/basscss.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/arhiv/site.css",
+    "inputFile": "wwwroot/css/arhiv/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/lib/normalize-scss/_normalize.css",
+    "inputFile": "wwwroot/lib/normalize-scss/_normalize.scss"
+  }
+]
