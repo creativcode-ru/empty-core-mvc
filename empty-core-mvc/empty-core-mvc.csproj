@@ -9,22 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\lib\basscss-sass\**" />
-    <Compile Remove="wwwroot\lib\basscss\**" />
-    <Content Remove="wwwroot\lib\basscss-sass\**" />
-    <Content Remove="wwwroot\lib\basscss\**" />
-    <EmbeddedResource Remove="wwwroot\lib\basscss-sass\**" />
-    <EmbeddedResource Remove="wwwroot\lib\basscss\**" />
-    <None Remove="wwwroot\lib\basscss-sass\**" />
-    <None Remove="wwwroot\lib\basscss\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="wwwroot\css\arhiv\normalize.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="wwwroot\css\arhiv\site-start.css" />
-    <Content Include="wwwroot\css\arhiv\site-start.scss" />
     <Content Include="wwwroot\css\site.css" />
   </ItemGroup>
   <ItemGroup>
@@ -40,7 +27,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\img\" />
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
 </Project>
