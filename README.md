@@ -10,3 +10,6 @@
 
 ## работа с Saas
 На вашей Visual Studio 2017 должен быть установлено расширение `Web Compiler`, [подробнее](https://twitter.com/creativcode/status/860030367289544705)
+
+## вопросы и комментарии
+Пожалуйста пишите в [комментарии к твиту](https://twitter.com/creativcode/status/859309873380589568)
