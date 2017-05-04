@@ -1,4 +1,6 @@
-# empty-core-mvc
+# Шаблон asp.net core на основе BassCss
+
+## empty-core-mvc
 Пустой шаблон Asp.Net Core MVC все скриптовые библиотеки и служебные файлы удалены.
 
 Добавлены библиотеки `BassCss` и `Normalize`
