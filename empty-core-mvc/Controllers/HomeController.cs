@@ -20,12 +20,6 @@ namespace empty_core_mvc.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Сведения о пректе";
-
-            return View();
-        }
 
         public IActionResult Error()
         {
