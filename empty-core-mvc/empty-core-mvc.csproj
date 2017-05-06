@@ -6,6 +6,10 @@
 
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+    <Company>CREATIVcode</Company>
+    <Authors>CREATIVcode</Authors>
+    <Description>Шаблон пустого проекта asp core mvc с использованием BassCss</Description>
+    <Copyright />
   </PropertyGroup>
 
   <ItemGroup>
