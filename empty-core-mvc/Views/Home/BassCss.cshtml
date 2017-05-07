@@ -685,15 +685,46 @@
 <hr />
 <h2 class="h1">Hide - спрятать</h2>
 <br />
+<p>Каждый стиль скрытия применяется только к одному диапазону точки останова. ###</p>
+<p class="mt1">
+    сокращенное соглашение об именах:<br />
+    xs-   Ниже 40em<br />
+    SM-   40em - 52em<br />
+    MD-   52em - 64em<br />
+    LG-   Выше 64em<br />
+</p>
+
+<h3 class="xs-hide">Hidden below 40em</h3>
+<h3 class="sm-hide red">Hidden between 40 and 52em</h3>
+<h3 class="md-hide red">Hidden between 52 and 64em</h3>
+<h3 class="lg-hide red">Hidden above 64em</h3>
 
 <br />
+<h1>
+    Responsive Line Break
+    <br class="xs-hide">
+    To Control Wrapping
+</h1>
 <p></p>
 
 <br />
+<p>Скрыть label</p>
+<div class="border">
+    <form>
+        <label for="search" class="hide">Search</label>
+        <input id="search" type="search" class="input">
+    </form>
+</div>
 <p></p>
 
 <br />
+<p>Не показывать</p>
+<div>Visible, а ниже есть скрытый элемент</div>
+<div class="display-none">Hidden</div>
 <p></p>
 
+
+
+<h2 class="h1">Extend Basscss</h2>
 <br />
-<p></p>
+<p>Существует несколько дополнительных модулей, не включенных в базовый пакет Basscss, включая цвета и стили кнопок, адаптивные поля и отступы</p>

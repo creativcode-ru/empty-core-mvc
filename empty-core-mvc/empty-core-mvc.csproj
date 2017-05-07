@@ -10,6 +10,7 @@
     <Authors>CREATIVcode</Authors>
     <Description>Шаблон пустого проекта asp core mvc с использованием BassCss</Description>
     <Copyright />
+    <RootNamespace>empty_core_mvc</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
