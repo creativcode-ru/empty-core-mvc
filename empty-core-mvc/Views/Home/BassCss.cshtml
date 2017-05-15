@@ -467,8 +467,8 @@
 <br />
 @*-------------------------------------------------------*@
 <hr />
-<h2 class="h1">Flexbox - гибкий макет (резиновый) </h2>
-<p >Гибкий макет позволяет в некоторых случаях отказаться от сетки.</p>
+<h2 class="h1">Flexbox - резиновый макет (гибкий) </h2>
+<p >Резиновый макет позволяет в некоторых случаях отказаться от сетки.</p>
 <p>Дополнительные сведения <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">Using CSS flexible boxes</a> <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" >CSS Flexible Box Layout Module Specification</a></p>
 
 <br />
@@ -497,7 +497,7 @@
 <p>размещение в один столбец в гибком макете .flex.flex-column. Здесь используется span а не div</p>
 <div class="flex flex-column">
     <span class="border">Hamburger</span>
-    <span class="border">Hot Dog</span>
+    <span class="border">flex flex-column</span>
 </div>
 
 <br />
@@ -525,26 +525,26 @@
 </div>
 
 <br />
-<p>Для управления вертикальным выравниванием элементов flexbox используйте утилиты align-items .  Эти стили используют сокращенное соглашение об именах.  items для свойства align-items и start и end для значений flex-start и flex-end</p>
-<div class="flex items-start border">
-    <h1 class="border">Hamburger1</h1>
-    <div class="border">Hot Dog</div>
+<p>Для управления вертикальным выравниванием элементов flexbox используйте утилиты align-<b>items</b> .  Эти стили используют сокращенное соглашение об именах.  items для свойства align-items и start и end для значений flex-start и flex-end</p>
+<div class="flex items-start">
+    <h1 class="border">ПО ВЕРТИКАЛИ 1</h1>
+    <div class="bg-gray">items-start по верхнему краю</div>
 </div>
-<div class="flex items-end border">
-    <h1 class="border">Hamburger2</h1>
-    <div class="border">Hot Dog</div>
+<div class="flex items-end">
+    <h1 class="border">ПО ВЕРТИКАЛИ 2</h1>
+    <div class="bg-gray">items-end по нижнему краю</div>
 </div>
-<div class="flex items-center border">
-    <h1 class="border">Hamburger3</h1>
-    <div class="border">Hot Dog</div>
+<div class="flex items-center">
+    <h1 class="border">ПО ВЕРТИКАЛИ 3</h1>
+    <div class="bg-gray">items-center по центру</div>
 </div>
-<div class="flex items-baseline border">
-    <h1 class="border">Hamburger4</h1>
-    <div class="border">Hot Dog</div>
+<div class="flex items-baseline">
+    <h1 class="border">ПО ВЕРТИКАЛИ 4 по тексту</h1>
+    <div class="bg-gray">items-baselineg</div>
 </div>
-<div class="flex items-stretch border">
-    <h1 class="border">Hamburge5r</h1>
-    <div class="border">Hot Dog</div>
+<div class="flex items-stretch">
+    <h1 class="border">ПО ВЕРТИКАЛИ 5</h1>
+    <div class="bg-gray">items-stretch растянуть по вертикали</div>
 </div>
 
 <br />
@@ -575,65 +575,65 @@
 <p>Чтобы управлять интервалом для элементов по горизонтали, используйте  justify-content .  Эти стили используют соглашение об именовании.</p>
 <div class="flex justify-start border">
     <h1 class="border">Hamburger1</h1>
-    <div class="border">Hot Dog</div>
+    <div class="border">justify-start</div>
 </div>
 <div class="flex justify-end border">
     <h1 class="border">Hamburger2</h1>
-    <div class="border">Hot Dog</div>
+    <div class="border">justify-end</div>
 </div>
 <div class="flex justify-center border">
     <h1 class="border">Hamburger3</h1>
-    <div class="border">Hot Dog</div>
+    <div class="border">justify-center</div>
 </div>
 <div class="flex justify-between border">
     <h1 class="border">Hamburger4</h1>
-    <div class="border">Hot Dog</div>
+    <div class="border">justify-between</div>
 </div>
 <div class="flex justify-around border">
     <h1 class="border">Hamburger5</h1>
-    <div class="border">Hot Dog</div>
+    <div class="border">justify-around</div>
 </div>
 
 
 <br />
 <p>Для выравнивания элементов вдоль поперечной оси используйте утилиты выравнивания содержимого.  Для свойства align-content используется сокращенный код соглашения об именах.</p>
 <div class="flex flex-wrap content-start border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger1</div>
+    <div class="col-6 border">flex flex-wrap content-start1</div>
     <div class="col-6 border">Hamburge2r</div>
     <div class="col-6 border">Hamburger3</div>
     <div class="col-6 border">Hamburger4</div>
 </div>
 
 <div class="flex flex-wrap content-end border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger</div>
+    <div class="col-6 border">flex flex-wrap content-end</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
 </div>
 
 <div class="flex flex-wrap content-center border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger</div>
+    <div class="col-6 border">flex flex-wrap content-center</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
 </div>
 
 <div class="flex flex-wrap content-between border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger</div>
+    <div class="col-6 border">flex flex-wrap content-between</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
 </div>
 
 <div class="flex flex-wrap content-around border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger</div>
+    <div class="col-6 border">flex flex-wrap content-around</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
 </div>
 
 <div class="flex flex-wrap content-stretch border" style="min-height: 128px">
-    <div class="col-6 border">Hamburger</div>
+    <div class="col-6 border">flex flex-wrap content-stretch</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
     <div class="col-6 border">Hamburger</div>
