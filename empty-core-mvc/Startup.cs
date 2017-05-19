@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Rewrite;
 // Документация https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting
 // Примеры на gitgub https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/url-rewriting/sample
 
+using Microsoft.Net.Http.Headers; //для 301 редиректа вклассе RedirectWwwRule
+
 namespace empty_core_mvc
 {
     public class Startup
@@ -42,6 +44,7 @@ namespace empty_core_mvc
 
             //Перенаправление  url до его обработки
             var rewriteOptions = new RewriteOptions()
+                .Add(new RedirectWwwRule())     //убираем www. см. код класса
                 .AddRedirect("(.*)/$", "$1")    //убираем слеж в конце адреса
                 .AddRedirect("((?i)(home(/index)?|index))$", "/"); //убираем дубликат стартовой страницы; (?i) это ignorecase
 
@@ -71,4 +74,50 @@ namespace empty_core_mvc
             });
         }
     }
+
+
+    /// <summary>
+    /// Редирект 301 с www. на домен без www.
+    /// </summary>
+    public class RedirectWwwRule : Microsoft.AspNetCore.Rewrite.IRule
+    {
+        // app.UseRewriter(new RewriteOptions().Add(new RedirectWwwRule()));
+        ////отбросить www http://stackoverflow.com/questions/41205435/asp-net-core-1-1-url-rewriting-www-to-non-www
+        // или https://www.softfluent.com/blog/dev/Page-redirection-and-URL-Rewriting-with-ASP-NET-Core
+
+
+        public void ApplyRule(RewriteContext context)
+        {
+            var req = context.HttpContext.Request;
+            var host = req.Host;
+            if (string.Equals(host.Host, "localhost", StringComparison.OrdinalIgnoreCase))
+            {
+                context.Result = RuleResult.ContinueRules;
+                return;
+            }
+
+            // checking if the hostName has www. at the beginning
+            if (host.ToString().StartsWith("www."))
+            {
+                // Strip off www.
+                var newHostName = host.ToString().Substring(4);
+
+                // Creating new url
+                var newUrl = new System.Text.StringBuilder()
+                                      .Append(req.Scheme)
+                                      .Append(newHostName)
+                                      .Append(req.PathBase)
+                                      .Append(req.Path)
+                                      .Append(req.QueryString)
+                                      .ToString();
+
+                // Modify Http Response
+                var response = context.HttpContext.Response;
+                response.Headers[HeaderNames.Location] = newUrl;
+                response.StatusCode = 301;
+                context.Result = RuleResult.EndResponse; // Do not continue processing the request   
+            }
+        }
+    }
+
 }
