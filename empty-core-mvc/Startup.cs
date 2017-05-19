@@ -8,6 +8,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using Microsoft.AspNetCore.Rewrite;
+// Для перизаписи URL требуется установить Microsoft.AspNetCore.Rewrite https://www.nuget.org/packages/Microsoft.AspNetCore.Rewrite/
+// Документация https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting
+// Примеры на gitgub https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/url-rewriting/sample
+
 namespace empty_core_mvc
 {
     public class Startup
@@ -34,6 +39,15 @@ namespace empty_core_mvc
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
+            //Перенаправление  url до его обработки
+            var rewriteOptions = new RewriteOptions()
+                .AddRedirect("(.*)/$", "$1")    //убираем слеж в конце адреса
+                .AddRedirect("((?i)(home(/index)?|index))$", "/"); //убираем дубликат стартовой страницы; (?i) это ignorecase
+
+            app.UseRewriter(rewriteOptions); //https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting
+
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
