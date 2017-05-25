@@ -104,7 +104,7 @@ namespace empty_core_mvc
 
                 // Creating new url
                 var newUrl = new System.Text.StringBuilder()
-                                      .Append(req.Scheme)
+                                      .Append(req.Scheme).Append("://")
                                       .Append(newHostName)
                                       .Append(req.PathBase)
                                       .Append(req.Path)
