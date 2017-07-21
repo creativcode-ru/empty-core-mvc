@@ -10,6 +10,7 @@ using System.Security.Claims;
 using empty_core_mvc.ViewModels; // пространство имен моделей RegisterModel и LoginModel
 using empty_core_mvc.Models; // пространство имен UserContext и класса User
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Authentication;
 
 namespace empty_core_mvc.Controllers
 {
@@ -116,22 +117,33 @@ namespace empty_core_mvc.Controllers
              */
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
-            
-            // установка аутентификационных куки
+
+            // установка временного кука, до закрытия броузера
             /* В качестве параметра используется схема аутентификации, 
                которая была использована при установки middleware app.UseCookieAuthentication в классе Startup (произвольное название).
              * ClaimsPrincipal, который представляет пользователя.
              */
-            await HttpContext.Authentication.SignInAsync("Cookies", new ClaimsPrincipal(id));
+            ClaimsPrincipal principal = new ClaimsPrincipal(id);
+            await HttpContext.Authentication.SignInAsync("Cookies", principal);
             /* после вызова метода HttpContext.Authentication.SignInAsync в ответ клиенту будут отправляться аутентификационные куки, 
                которые при последующих запросах будут передаваться обратно на сервер, десериализоваться и использоваться для аутентификации пользователя.
             */
+
+            //* * * * * * * * * *    кук остающийся после закрытия броузера   * * * * * * * * * 
+            // https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie
+            //await HttpContext.Authentication.SignInAsync("Cookies", principal, new AuthenticationProperties { IsPersistent = true });
+
+            //кук на заданное время
+            //await HttpContext.Authentication.SignInAsync("Cookies", principal, new AuthenticationProperties { ExpiresUtc = DateTime.UtcNow.AddMinutes(20) });
         }
+
+
 
         public async Task<IActionResult> Logout()
         {
             await HttpContext.Authentication.SignOutAsync("Cookies"); //выход из авторизации, передается название схемы аутентификации, использованное в классе Startup
-            return RedirectToAction("Index", "Home"); //переход на страницу выхода - главная стрвница
+            return Content("Logout");
+            //return RedirectToAction("Index", "Home"); //переход на страницу выхода - главная стрвница
         }
 
 
@@ -140,8 +152,9 @@ namespace empty_core_mvc.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            return Content(User.Identity.Name);
+            return Content(User.Identity.Name + " для выхода используйте /account/logout");
             //return View();
         }
+
     }
 }
