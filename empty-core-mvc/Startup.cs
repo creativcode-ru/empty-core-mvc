@@ -12,8 +12,18 @@ using Microsoft.AspNetCore.Rewrite;
 // Для перизаписи URL требуется установить Microsoft.AspNetCore.Rewrite https://www.nuget.org/packages/Microsoft.AspNetCore.Rewrite/
 // Документация https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting
 // Примеры на gitgub https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/url-rewriting/sample
-
 using Microsoft.Net.Http.Headers; //для 301 редиректа вклассе RedirectWwwRule
+
+//простая авторизация по кукам https://metanit.com/sharp/aspnet5/15.1.php
+/* Добавить пакет NuGet: Microsoft.AspNetCore.Authentication.Cookies
+   и для хранения данных Microsoft.EntityFrameworkCore.SqlServer и Microsoft.EntityFrameworkCore.Tools
+*/
+using empty_core_mvc.Models; 
+using Microsoft.EntityFrameworkCore; //для подключения к база
+/*
+ */
+
+
 
 namespace empty_core_mvc
 {
@@ -34,6 +44,9 @@ namespace empty_core_mvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = Configuration.GetConnectionString("DefaultConnection"); //из файла appsettings.json; имя БД: (localdb)\MSSQLLocalDB
+            services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));//для авторизации
+
             // Add framework services.
             services.AddMvc();
         }
@@ -54,6 +67,7 @@ namespace empty_core_mvc
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -65,6 +79,15 @@ namespace empty_core_mvc
             }
 
             app.UseStaticFiles();
+
+            //Авторизация по кукам
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationScheme = "Cookies",
+                LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login"),
+                AutomaticAuthenticate = true, //при каждом запросе проверять пользователя на  аутентификацию
+                AutomaticChallenge = true //не авторизованный пользователь при попытке доступа к ресурсам, для которых нужна авторизация, будет перенаправляться по пути в свойстве LoginPath
+            });
 
             app.UseMvc(routes =>
             {
